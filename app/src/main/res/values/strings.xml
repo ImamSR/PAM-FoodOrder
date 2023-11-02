@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ProjectUts</string>
+    <string name="spinnertext">Store</string>
+    <string name="nameId">Nama Order</string>
+    <string name="enter_address_hint">Masukan Nama Order</string>
+    <string name="buttonID">Submit</string>
+    <string name="buttonID2">Liat Menuu</string>
+    <string name="Store">Store\n</string>
+    <string name="locationString">Location</string>
+    <string name="locationString2">See On Maps\n</string>
+    <string-array name="city_array">
+        <item>Cibiru</item>
+        <item>Cihampelas</item>
+        <item>Dago</item>
+    </string-array>
+</resources>
