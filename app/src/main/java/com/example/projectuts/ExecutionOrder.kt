@@ -1,5 +1,6 @@
 package com.example.projectuts
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,6 +17,7 @@ class ExecutionOrder : AppCompatActivity() {
         val checkBoxAmbilSendiri = findViewById<CheckBox>(R.id.checkbox_ambil_sendiri)
         val checkBoxFastDelivery = findViewById<CheckBox>(R.id.checkbox_fast_delivery)
         val doneButton = findViewById<Button>(R.id.done_id_button)
+        val reOrderButton = findViewById<Button>(R.id.reOrder_id_button)
 
         val userIdTextView = findViewById<TextView>(R.id.user_id)
         val locationTextView = findViewById<TextView>(R.id.location_textView)
@@ -39,6 +41,12 @@ class ExecutionOrder : AppCompatActivity() {
                 val toastMessage = buildToastMessage(userId, foodItem, checkBoxAmbilSendiri.isChecked, checkBoxFastDelivery.isChecked)
                 showToast(toastMessage)
             }
+        }
+        reOrderButton.setOnClickListener {
+            val intent = Intent(this, page3::class.java)
+            intent.putExtra("USER_ID",userId)
+            intent.putExtra("STORE_LOCATION",storeLocation)
+            startActivity(intent)
         }
 
     }

@@ -9,9 +9,9 @@ class page4_Papperroni : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page4_papperroni)
-        val userId = intent.getStringExtra("USER_ID")
-        val storeSTORE_LOCATION = intent.getStringExtra("STORE_LOCATION")
 
+        val userId = intent.getStringExtra("USER_ID")
+        val storeLocation = intent.getStringExtra("STORE_LOCATION")
         val selectedFood = intent.getStringExtra("FOOD_NAME")
 
         val orderButton = findViewById<Button>(R.id.OrderIdBtn)
@@ -19,7 +19,7 @@ class page4_Papperroni : AppCompatActivity() {
             val intent = Intent(this, ExecutionOrder::class.java)
             intent.putExtra("SELECTED_FOOD", selectedFood)
             intent.putExtra("USER_ID",userId)
-            intent.putExtra("STORE_LOCATION",storeSTORE_LOCATION)
+            intent.putExtra("STORE_LOCATION",storeLocation)
             startActivity(intent)
         }
 
